@@ -10,34 +10,21 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: 'Fleur Charge | Premium Phone Charging Kiosk Rental',
+  description: 'Generate passive revenue with premium phone charging kiosks. Perfect for gyms, colleges, casinos, and hospitality venues.',
+  keywords: 'phone charging kiosk, rental revenue, venue charging station, passive income',
+  openGraph: {
+    title: 'Fleur Charge | Premium Phone Charging Kiosk Rental',
+    description: 'Generate passive revenue with premium phone charging kiosks for your venue.',
+    type: 'website',
   },
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  colorScheme: 'light',
+  themeColor: '#0A0A0A',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -46,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} bg-background`}>
+      <body className="font-sans antialiased bg-background text-foreground">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
