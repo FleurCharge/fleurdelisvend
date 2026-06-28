@@ -31,7 +31,6 @@ export function Footer() {
             Request a Consultation
           </Button>
         </div>
-
         {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 py-14">
           {/* Brand */}
@@ -162,23 +161,32 @@ export function Footer() {
             </div>
           </div>
         </div>
-
         {/* Bottom */}
-        <div className="border-t border-primary-foreground/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-primary-foreground/70">
-            © 2026 Fleur Charge. All rights reserved.
-          </p>
-
-          <div className="flex gap-6 text-sm text-primary-foreground/70">
-            <a href="#" className="hover:text-accent transition-colors">
-              Privacy Policy
-            </a>
-
-            <a href="#" className="hover:text-accent transition-colors">
-              Terms of Service
-            </a>
+        <div className="border-t border-primary-foreground/10">
+          {/* Trust Statement */}
+          <div className="py-5 text-center">
+            <p className="text-sm md:text-base font-medium text-primary-foreground/90">
+              Proudly Formed in Louisiana • US Veteran-Owned • Serving
+              Businesses Nationwide
+            </p>
           </div>
-        </div>
+
+          <div className="border-t border-primary-foreground/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-primary-foreground/70">
+              © 2026 Fleur Charge. All rights reserved.
+            </p>
+
+            <div className="flex gap-6 text-sm text-primary-foreground/70">
+              <a href="#" className="hover:text-accent transition-colors">
+                Privacy Policy
+              </a>
+
+              <a href="#" className="hover:text-accent transition-colors">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>{" "}
       </Container>
     </footer>
   );
